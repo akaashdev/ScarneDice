@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.amateurdeveloper.akaashdev.scarnedice.MainActivity">
+
+    <Button
+        android:text="ROLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/face"
+        android:layout_toLeftOf="@+id/face"
+        android:layout_toStartOf="@+id/face"
+        android:layout_marginTop="61dp"
+        android:id="@+id/rollB"
+        android:onClick="rollFunc"/>
+
+    <Button
+        android:text="HOLD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rollB"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/holdB"
+        android:onClick="holdFunc"/>
+
+    <Button
+        android:text="RESET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/holdB"
+        android:layout_toRightOf="@+id/face"
+        android:layout_toEndOf="@+id/face"
+        android:id="@+id/resetB"
+        android:onClick="resetFunc"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp"
+        android:id="@+id/result"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/dice1"
+        android:layout_marginTop="75dp"
+        android:id="@+id/face"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Your Score - "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:id="@+id/scoreV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_below="@+id/holdB"
+        android:layout_alignLeft="@+id/holdB"
+        android:layout_alignStart="@+id/holdB" />
+
+    <TextView
+        android:text="COMPUTER SCORE -"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/cscoreV"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:layout_below="@+id/scoreV"
+        android:layout_toLeftOf="@+id/resetB"
+        android:layout_toStartOf="@+id/resetB" />
+</RelativeLayout>
